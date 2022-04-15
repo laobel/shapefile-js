@@ -9,10 +9,11 @@
   },
   "scripts": {
     "test": "mocha ./test/test.js",
+    "test1": "mocha ./test/test1.js",
     "build-test": "browserify ./test/test.js > ./test/bundle.js",
     "build": "browserify . -s shp > ./dist/shp.js",
     "min": "browserify . -s shp | minify > ./dist/shp.min.js",
-    "serve":"node test/server.js"
+    "serve": "node test/server.js"
   },
   "author": "Calvin Metcalf",
   "license": "MIT",
@@ -26,14 +27,15 @@
     "express": "^4.17.2",
     "mocha": "^7.1.2",
     "morgan": "^1.10.0",
-    "semistandard": "^16.0.1"
+    "semistandard": "^16.0.1"    
   },
   "dependencies": {
     "jszip": "^3.5.0",
     "lie": "^3.0.1",
     "lru-cache": "^2.7.0",
     "parsedbf": "^1.1.0",
-    "proj4": "^2.1.4"
+    "proj4": "^2.8.0",
+    "proj-data": "0.0.1"
   },
   "browser": {
     "./lib/binaryajax.js": "./lib/binaryajax-fetch.js"
